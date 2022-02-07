@@ -1,105 +1,46 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Search from '../searchbar/Search';
 import sidebarStyles from './sidebar.module.css';
-import Option from './option';
+import Option from './Option';
 
-//dev
-const chara = [
-	{
-		id: '1',
-		name: 'Tartaglia',
-		avatarPath: 'test.png',
-		element: 'aqua',
-	},
-	{
-		id: '2',
-		name: 'Tartaglia',
-		avatarPath: 'test.png',
-		element: 'aqua',
-	},
-	{
-		id: '3',
-		name: 'Tartaglia',
-		avatarPath: 'test.png',
-		element: 'aqua',
-	},
-	{
-		id: '3',
-		name: 'Tartaglia',
-		avatarPath: 'test.png',
-		element: 'aqua',
-	},
-	{
-		id: '3',
-		name: 'Tartaglia',
-		avatarPath: 'test.png',
-		element: 'aqua',
-	},
-	{
-		id: '3',
-		name: 'Tartaglia',
-		avatarPath: 'test.png',
-		element: 'aqua',
-	},
-	{
-		id: '3',
-		name: 'Tartaglia',
-		avatarPath: 'test.png',
-		element: 'aqua',
-	},
-	{
-		id: '3',
-		name: 'Tartaglia',
-		avatarPath: 'test.png',
-		element: 'aqua',
-	},
-	{
-		id: '3',
-		name: 'Tartaglia',
-		avatarPath: 'test.png',
-		element: 'aqua',
-	},
-	{
-		id: '3',
-		name: 'Tartaglia',
-		avatarPath: 'test.png',
-		element: 'aqua',
-	},
-	{
-		id: '3',
-		name: 'Tartaglia',
-		avatarPath: 'test.png',
-		element: 'aqua',
-	},
-	{
-		id: '3',
-		name: 'Tartaglia',
-		avatarPath: 'test.png',
-		element: 'aqua',
-	},
-	{
-		id: '3',
-		name: 'Tartaglia',
-		avatarPath: 'test.png',
-		element: 'aqua',
-	},
-];
-//
+interface CharacterListInterface {
+	id: string;
+	name: string;
+	avatarPath: string;
+	elementColor: string;
+}
 
 const Sidebar = () => {
+	const [characterList, setCharacterList] = useState<
+		CharacterListInterface[]
+	>([]);
 	const searchRef = useRef(null);
+	useEffect(() => {
+		(async () => {
+			try {
+				const res = await fetch(
+					'https://gcalc-server.herokuapp.com/characters/',
+					{ method: 'GET' }
+				);
+				const data = await res.json();
+				setCharacterList(data);
+			} catch (error) {
+				console.error(error);
+			}
+		})();
+	}, []);
 	return (
 		<>
 			<div className={sidebarStyles.container}>
 				<Search />
 				<div className={sidebarStyles.drawer}>
-					{chara.map((character) => {
+					{characterList.map((character) => {
 						return (
 							<Option
 								id={character.id}
 								name={character.name}
 								avatarPath={character.avatarPath}
-								elementColor={character.element}
+								elementColor={character.elementColor}
 								key={character.id}
 							/>
 						);
