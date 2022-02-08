@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Search from '../searchbar/Search';
 import sidebarStyles from './sidebar.module.css';
 import Option from './Option';
@@ -14,7 +14,6 @@ const Sidebar = () => {
 	const [characterList, setCharacterList] = useState<
 		CharacterListInterface[]
 	>([]);
-	const searchRef = useRef(null);
 	useEffect(() => {
 		(async () => {
 			try {
