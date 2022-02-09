@@ -1,25 +1,28 @@
-import React, { useState } from 'react';
-import { atom, useRecoilState } from 'recoil';
+import React from 'react';
+import { RecoilState, useRecoilState } from 'recoil';
 import searchStyles from './search.module.css';
 
-export const searchState = atom({
-	key: 'searchState',
-	default: '',
-});
+interface Props {
+	placeholder: string;
+	stateAtom: RecoilState<string>;
+	callback?: () => void;
+}
 
-const Search = () => {
-	const [searchValue, setSearchValue] = useRecoilState(searchState);
+const Search = ({ placeholder, stateAtom, callback }: Props) => {
+	const [searchValue, setSearchValue] = useRecoilState(stateAtom);
 	return (
 		<>
 			<div className={searchStyles.bar}>
 				<input
-					value={searchValue}
 					onChange={(e) => {
 						setSearchValue(e.target.value);
+						console.log(e.target.value);
+						callback && callback();
 					}}
+					value={searchValue}
 					type='text'
 					spellCheck={false}
-					placeholder='Search for a character'
+					placeholder={placeholder}
 					className={searchStyles.input}
 				/>
 			</div>

@@ -2,18 +2,13 @@ import React, { useEffect, useState } from 'react';
 import Search from '../searchbar/Search';
 import sidebarStyles from './sidebar.module.css';
 import Option from './Option';
-
-interface CharacterListInterface {
-	id: string;
-	name: string;
-	avatarPath: string;
-	elementColor: string;
-}
+import { CharacterInterface } from '../../util/interfaces';
+import { sidebarSearchAtom } from '../../util/atoms';
 
 const Sidebar = () => {
-	const [characterList, setCharacterList] = useState<
-		CharacterListInterface[]
-	>([]);
+	const [characterList, setCharacterList] = useState<CharacterInterface[]>(
+		[]
+	);
 	useEffect(() => {
 		(async () => {
 			try {
@@ -31,7 +26,10 @@ const Sidebar = () => {
 	return (
 		<>
 			<div className={sidebarStyles.container}>
-				<Search />
+				<Search
+					placeholder='Search for a character'
+					stateAtom={sidebarSearchAtom}
+				/>
 				<div className={sidebarStyles.drawer}>
 					{characterList.map((character) => {
 						return (
