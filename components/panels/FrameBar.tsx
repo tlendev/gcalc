@@ -12,7 +12,6 @@ const FrameBar = () => {
 				return (
 					<Bookmark
 						id={selectedCharacter.id}
-						isActive={false}
 						title={selectedCharacter.name}
 						key={selectedCharacter.id}
 					/>
