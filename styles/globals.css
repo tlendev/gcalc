@@ -27,6 +27,7 @@ body * {
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
 	width: 14px;
+	height: 14px;
 }
 
 *::-webkit-scrollbar-track {
