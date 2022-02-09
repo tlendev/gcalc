@@ -1,16 +1,22 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
+import indexStyles from '../styles/Home.module.css';
 import Sidebar from '../components/sidebar/Sidebar';
-import styles from '../styles/Home.module.css';
+import Frame from '../components/panels/Frame';
+import WelcomeFrame from '../components/panels/welcome/WelcomeFrame';
+import CharacterFrame from '../components/panels/character/CharacterFrame';
+import { useRecoilState } from 'recoil';
+import { selectedActiveCharacterAtom } from '../util/atoms';
 
 const Home: NextPage = () => {
+	const [selectedActiveCharacter, setSelectedActiveCharacter] =
+		useRecoilState(selectedActiveCharacterAtom);
 	return (
 		<>
 			<Head>
 				<title>Gcalc</title>
 				<meta
-					http-equiv='Content-Type'
+					httpEquiv='Content-Type'
 					content='text/html;charset=UTF-8'
 				/>
 				<meta name='description' content='placeholder desc' />
@@ -19,8 +25,15 @@ const Home: NextPage = () => {
 					content='width=device-width, initial-scale=1.0'
 				/>
 			</Head>
-			<div className={styles.container}>
+			<div className={indexStyles.container}>
 				<Sidebar />
+				<Frame>
+					{selectedActiveCharacter ? (
+						<CharacterFrame id={selectedActiveCharacter} />
+					) : (
+						<WelcomeFrame />
+					)}
+				</Frame>
 			</div>
 		</>
 	);
