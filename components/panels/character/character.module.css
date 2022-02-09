@@ -1,0 +1,7 @@
+.container {
+	/* Position fixed fix */
+	margin-top: 50px;
+	width: 100%;
+	height: calc(100% - 50px);
+	display: flex;
+}

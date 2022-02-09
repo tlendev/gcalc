@@ -1,0 +1,50 @@
+.container {
+	/* Position fixed fix */
+	margin-top: 50px;
+	width: 100%;
+	height: calc(100% - 50px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: rgb(46, 46, 46);
+	text-align: center;
+	line-height: 0;
+}
+
+.logo {
+	margin-bottom: 60px;
+}
+
+.message_container {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.text {
+	font-size: 1.25rem;
+}
+
+.author {
+	position: absolute;
+	bottom: 4%;
+}
+
+.author a {
+	color: aqua;
+	text-decoration: none;
+	text-align: center;
+}
+
+/* PLACEHOLDER */
+.placeholder__logo_cont {
+	width: 150px;
+	height: 150px;
+	display: grid;
+	grid-template:
+		'a b' 1fr
+		'c d' 1fr / 1fr 1fr;
+	gap: 8px;
+	transform: rotate(45deg);
+}
