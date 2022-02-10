@@ -22,6 +22,6 @@
 }
 
 .close:hover {
-	color: red;
-	background-color: var(--bg-300);
+	color: rgb(228, 0, 0);
+	background-color: hsl(240, 26%, 12%);
 }

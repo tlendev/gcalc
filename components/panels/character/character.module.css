@@ -1,6 +1,6 @@
 .container {
 	/* Position fixed fix */
-	margin-top: 50px;
+	margin-top: 25px;
 	width: 100%;
 	height: calc(100vh - 50px);
 	display: flex;
@@ -41,13 +41,23 @@
 	flex-flow: row nowrap;
 }
 
-.element,
+.ico {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.ico,
 .rarity,
 .weapon {
 	background-color: var(--bg-300);
 	border-radius: 5px;
-	padding: 20px 15px;
 	margin-left: 4px;
 	margin-right: 4px;
 	font-size: 1.4rem;
+}
+
+.element {
+	margin-left: 8px;
 }
