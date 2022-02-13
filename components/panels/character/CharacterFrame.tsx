@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Parallax } from 'react-scroll-parallax';
 import { CharacterDetailsInterface } from '../../../util/interfaces';
 import characterStyles from './character.module.css';
 import Details from './Details';

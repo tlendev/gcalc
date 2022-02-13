@@ -1,4 +1,5 @@
 import React from 'react';
+import Calculator from './Calculator';
 import detailsStyles from './details.module.css';
 import Pocket from './Pocket';
 
@@ -26,6 +27,7 @@ const test: any[] = [
 const Details = () => {
 	return (
 		<div className={detailsStyles.container}>
+			<Calculator />
 			<Pocket title='Ascention' items={test} />
 			<Pocket title='Skills' items={test} />
 			<Pocket title='Total' items={test} />
