@@ -5,12 +5,11 @@ import Sidebar from '../components/sidebar/Sidebar';
 import Frame from '../components/panels/Frame';
 import WelcomeFrame from '../components/panels/welcome/WelcomeFrame';
 import CharacterFrame from '../components/panels/character/CharacterFrame';
-import { useRecoilState } from 'recoil';
+import { useRecoilValue } from 'recoil';
 import { selectedActiveCharacterAtom } from '../util/atoms';
 
 const Home: NextPage = () => {
-	const [selectedActiveCharacter, setSelectedActiveCharacter] =
-		useRecoilState(selectedActiveCharacterAtom);
+	const selectedActiveCharacter = useRecoilValue(selectedActiveCharacterAtom);
 	return (
 		<>
 			<Head>

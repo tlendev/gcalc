@@ -38,7 +38,7 @@ const Bookmark = ({ id, title }: Props) => {
 			}}
 			className={bookmarkStyles.container}
 			style={{
-				backgroundColor: isActive ? 'var(--bg-200)' : 'var(--bg-100)',
+				backgroundColor: isActive ? 'var(--bg-200)' : 'unset',
 			}}
 		>
 			<p className={bookmarkStyles.title}>{title}</p>
