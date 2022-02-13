@@ -1,0 +1,29 @@
+.container {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	width: 100%;
+	border-radius: 5px;
+	padding: 1rem;
+	background-color: var(--bg-300);
+	display: flex;
+	flex-wrap: nowrap;
+	box-shadow: 0 0 20px black;
+}
+
+.title {
+	color: rgb(136, 136, 136);
+	line-height: 0.2;
+	font-weight: 500;
+	flex: 1;
+}
+
+.collapsed {
+	flex: 3;
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+.expanded {
+	flex: 1;
+	flex-flow: column nowrap;
+}
