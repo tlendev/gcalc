@@ -28,6 +28,7 @@ const Details = () => {
 	return (
 		<div className={detailsStyles.container}>
 			<Calculator />
+			<p className={detailsStyles.para}>Summary</p>
 			<Pocket title='Ascention' items={test} />
 			<Pocket title='Skills' items={test} />
 			<Pocket title='Total' items={test} />
