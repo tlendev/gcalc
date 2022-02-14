@@ -1,0 +1,28 @@
+.title {
+	color: #fff;
+	font-size: 1.3rem;
+	font-weight: 600;
+}
+
+.cells {
+	width: 100%;
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+.icon {
+	width: 75px;
+	height: 75px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.arrow {
+	flex: 1;
+	font-size: 5rem;
+	color: var(--bg-200);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

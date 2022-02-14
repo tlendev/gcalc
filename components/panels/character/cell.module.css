@@ -1,0 +1,13 @@
+.container {
+	padding: 8px;
+	display: flex;
+	flex-flow: row nowrap;
+	border-radius: 5px;
+	background-color: var(--bg-300);
+	flex: 3;
+	margin: 0 10px;
+	height: 150px;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+}
