@@ -37,7 +37,7 @@ const option = ({ id, name, avatarPath, elementColor }: CharacterInterface) => {
 					className={optionStyles.border}
 					style={{ backgroundColor: elementColor }}
 				></div>
-				<Image src={`/${avatarPath}`} width='52' height='62' />
+				<Image src={`/avatar/${avatarPath}`} width='52' height='62' />
 				<p className={optionStyles.name}>{name}</p>
 			</div>
 		</>

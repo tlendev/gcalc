@@ -31,8 +31,12 @@ const CharacterFrame = ({ id }: Props) => {
 	}, [id]);
 	return (
 		<div className={characterStyles.container}>
-			<Header characterDetails={characterDetails} />
-			<Details />
+			{characterDetails && (
+				<>
+					<Header characterDetails={characterDetails} />
+					<Details characterDetails={characterDetails} />
+				</>
+			)}
 		</div>
 	);
 };

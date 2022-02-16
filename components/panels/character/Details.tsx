@@ -1,8 +1,13 @@
 import React from 'react';
+import {
+	levelItemsAtom,
+	skillsItemsAtom,
+	totalItemsAtom,
+} from '../../../util/atoms';
+import { CharacterDetailsInterface } from '../../../util/interfaces';
 import Calculator from './Calculator';
 import detailsStyles from './details.module.css';
 import Pocket from './Pocket';
-
 const test: any[] = [
 	{
 		title: 'Mora',
@@ -24,14 +29,18 @@ const test: any[] = [
 	},
 ];
 
-const Details = () => {
+interface Props {
+	characterDetails: CharacterDetailsInterface;
+}
+
+const Details = ({ characterDetails }: Props) => {
 	return (
 		<div className={detailsStyles.container}>
-			<Calculator />
+			<Calculator characterDetails={characterDetails} />
 			<p className={detailsStyles.para}>Summary</p>
-			<Pocket title='Ascention' items={test} />
-			<Pocket title='Skills' items={test} />
-			<Pocket title='Total' items={test} />
+			<Pocket title='Ascention' stateAtom={levelItemsAtom} />
+			<Pocket title='Skills' stateAtom={skillsItemsAtom} />
+			<Pocket title='Total' stateAtom={totalItemsAtom} />
 		</div>
 	);
 };

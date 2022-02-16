@@ -27,7 +27,7 @@ const CalcArea = ({
 					<div
 						className={calcAreaStyles.icon}
 						style={{
-							backgroundImage: `url(/icons/skill/${iconPath})`,
+							backgroundImage: `url(${iconPath})`,
 						}}
 					></div>
 				</Cell>

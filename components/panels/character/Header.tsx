@@ -1,5 +1,4 @@
 import React from 'react';
-import { Parallax } from 'react-scroll-parallax';
 import { CharacterDetailsInterface } from '../../../util/interfaces';
 import headerStyles from './header.module.css';
 

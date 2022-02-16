@@ -90,3 +90,18 @@ export const burstTargetAtom = atom({
 	key: 'burstTargetAtom',
 	default: 1,
 });
+
+export const levelItemsAtom = atom({
+	key: 'levelItemsAtom',
+	default: [] as any[],
+});
+
+export const skillsItemsAtom = atom({
+	key: 'skillItemsAtom',
+	default: [] as any[],
+});
+
+export const totalItemsAtom = atom({
+	key: 'totalItemsAtom',
+	default: [] as any[],
+});
