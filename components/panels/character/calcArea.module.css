@@ -21,7 +21,7 @@
 .arrow {
 	flex: 1;
 	font-size: 5rem;
-	color: var(--bg-200);
+	color: hsl(0, 0%, 85%);
 	display: flex;
 	justify-content: center;
 	align-items: center;

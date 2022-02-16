@@ -1,4 +1,45 @@
 .container {
 	display: flex;
 	flex-flow: row nowrap;
+	align-items: center;
+	width: 100%;
+}
+
+.display {
+	flex: 1;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+}
+
+.display input {
+	all: unset;
+	text-align: center;
+	background: hsl(240, 15%, 9%);
+	padding: 8px;
+	font-size: 1rem;
+	border-radius: 5px;
+	box-shadow: 0 0 20px hsla(0, 0%, 0%, 0.2);
+	height: 40px;
+	width: 35px;
+}
+
+.button_container {
+	flex: 1.5;
+	display: flex;
+	justify-content: center;
+}
+
+.button {
+	all: unset;
+	cursor: pointer;
+	background: hsl(240, 15%, 9%);
+	padding: 8px;
+	font-size: 1.25rem;
+	width: 35px;
+	height: 35px;
+	text-align: center;
+	border-radius: 5px;
+	line-height: 0;
+	box-shadow: 0 0 20px hsla(0, 0%, 0%, 0.2);
 }
