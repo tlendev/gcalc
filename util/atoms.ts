@@ -49,3 +49,44 @@ export const isSelectedAtom = atom({
 	key: 'isSelected',
 	default: '',
 });
+
+//
+export const levelAtom = atom({
+	key: 'levelAtom',
+	default: 1,
+});
+
+export const levelTargetAtom = atom({
+	key: 'levelTargetAtom',
+	default: 1,
+});
+
+export const normalAtom = atom({
+	key: 'normalAtom',
+	default: 1,
+});
+
+export const normalTargetAtom = atom({
+	key: 'normalTargetAtom',
+	default: 1,
+});
+
+export const skillAtom = atom({
+	key: 'skillAtom',
+	default: 1,
+});
+
+export const skillTargetAtom = atom({
+	key: 'skillTargetAtom',
+	default: 1,
+});
+
+export const burstAtom = atom({
+	key: 'burstAtom',
+	default: 1,
+});
+
+export const burstTargetAtom = atom({
+	key: 'burstTargetAtom',
+	default: 1,
+});
