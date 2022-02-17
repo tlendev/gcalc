@@ -13,7 +13,7 @@ const Home: NextPage = () => {
 	return (
 		<>
 			<Head>
-				<title>Gcalc</title>
+				<title>Genshin Impact Calculator</title>
 				<meta
 					httpEquiv='Content-Type'
 					content='text/html;charset=UTF-8'
@@ -23,6 +23,7 @@ const Home: NextPage = () => {
 					name='viewport'
 					content='width=device-width, initial-scale=1.0'
 				/>
+				<link rel='icon' type='image/svg' href='app/favicon.ico' />
 			</Head>
 			<div className={indexStyles.container}>
 				<Sidebar />
