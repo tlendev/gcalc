@@ -10,31 +10,27 @@ const WelcomeFrame = () => {
 				<div className={welcomeStyles.logo}>
 					<div className={welcomeStyles.placeholder__logo_cont}>
 						<div
-							className='placeholder__logo_part'
+							className={welcomeStyles.placeholder__logo_part}
 							style={{
 								gridArea: 'a',
-								backgroundColor: 'hsl(240, 60%, 3%)',
 							}}
 						></div>
 						<div
-							className='placeholder__logo_part'
+							className={welcomeStyles.placeholder__logo_part}
 							style={{
 								gridArea: 'b',
-								backgroundColor: 'hsl(240, 60%, 3%)',
 							}}
 						></div>
 						<div
-							className='placeholder__logo_part'
+							className={welcomeStyles.placeholder__logo_part}
 							style={{
 								gridArea: 'c',
-								backgroundColor: 'hsl(240, 60%, 3%)',
 							}}
 						></div>
 						<div
-							className='placeholder__logo_part'
+							className={welcomeStyles.placeholder__logo_part}
 							style={{
 								gridArea: 'd',
-								backgroundColor: 'hsl(240, 60%, 3%)',
 							}}
 						></div>
 					</div>

@@ -48,3 +48,7 @@
 	gap: 8px;
 	transform: rotate(45deg);
 }
+
+.placeholder__logo_part {
+	background-color: hsl(240, 15%, 4%);
+}
