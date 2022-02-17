@@ -9,5 +9,5 @@
 	height: 100px;
 	align-items: center;
 	justify-content: center;
-	color: #fff;
+	color: var(--cl-100);
 }

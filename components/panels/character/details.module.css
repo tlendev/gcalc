@@ -6,7 +6,7 @@
 }
 
 .para {
-	color: #fff;
+	color: var(--cl-100);
 	font-size: 1.3rem;
 	font-weight: 600;
 }

@@ -30,7 +30,7 @@
 }
 
 .quantity {
-	color: #fff;
+	color: var(--cl-100);
 	margin: 0;
 	margin-left: 8px;
 	font-weight: 500;
@@ -45,7 +45,7 @@
 
 .source_title {
 	flex: 1;
-	color: #fff;
+	color: var(--cl-100);
 }
 
 .source_origin {
